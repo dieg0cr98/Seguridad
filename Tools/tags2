@@ -1,0 +1,18 @@
+cout<<"<style>\n";
+cout<<"* {\n";
+cout<<"  box-sizing: border-box;\n";
+cout<<"}\n";
+cout<<"/* Create three equal columns that floats next to each other */\n";
+cout<<".column {\n";
+cout<<"  float: left;\n";
+cout<<"  width: 33.33%;\n";
+cout<<"  padding: 10px;\n";
+cout<<"  height: 300px; /* Should be removed. Only for demonstration */\n";
+cout<<"}\n";
+cout<<"/* Clear floats after the columns */\n";
+cout<<".row:after {\n";
+cout<<"  content: "<<""<<";\n";
+cout<<"  display: table;\n";
+cout<<"  clear: both;\n";
+cout<<"}\n";
+cout<<"</style>\n";

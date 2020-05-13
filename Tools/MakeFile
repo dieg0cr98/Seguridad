@@ -1,0 +1,11 @@
+all: cryp.cc
+	g++ -DNDEBUG -g3 -O2 -Wall -Wextra -o hash Hash.cc -l:libcryptopp.a
+	
+	
+	g++ Connector.cc -o Connector `mariadb_config --cflags --libs`
+
+	g++ -o Request Request.cc  ../Tools/Decoder.cc  ../Tools/Hash.cc ../Tools/Cookie.cc ../Tools/Connector.cc -l:libcryptopp.a `mariadb_config --cflags --libs`
+
+	g++ Decoder.cc -o Decoder 
+	
+	g++ -o hash Hash.cc -l:libcryptopp.a
